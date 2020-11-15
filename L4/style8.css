@@ -1,0 +1,27 @@
+body {
+  background-image: url(Grafiken/bg8.png);
+  display: flex;
+  height: 900px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mitte {
+  position: relative;
+}
+
+.YouTube iframe {
+  position: absolute;
+  top: 43px;
+  left: 38px;
+}
+
+.Banderole img {
+  position: absolute;
+}
+
+.Banderole {
+  top: 272px;
+  left: 366px;
+  z-index: 1;
+}
