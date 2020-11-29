@@ -1,0 +1,47 @@
+var Europa08 = 4965;
+var Europa18 = 4209;
+var NordAmerika08 = 6600;
+var NordAmerika18 = 6035;
+var SüdAmerika08 = 1132;
+var SüdAmerika18 = 1261;
+var Afrika08 = 1028;
+var Afrika18 = 1235;
+var Asien08 = 12954;
+var Asien18 = 16274;
+var Australien08 = 1993;
+var Australien18 = 2100;
+var Gesamt = Europa18 + NordAmerika18 + SüdAmerika18 + Afrika18 + Asien18 + Australien18;
+var relAfrika = (Afrika18 / Gesamt * 100);
+var zuAfrikaP = (100 - (Afrika08 / Afrika18 * 100));
+var zuAfrikaZ = (Afrika18 - Afrika08);
+var relSüdAmerika = (SüdAmerika18 / Gesamt * 100);
+var zuSüdAmerikaP = (100 - (SüdAmerika08 / SüdAmerika18 * 100));
+var zuSüdAmerikaZ = (SüdAmerika18 - SüdAmerika08);
+var relEuropa = (Europa18 / Gesamt * 100);
+var zuEuropaP = (100 - (Europa08 / Europa18 * 100));
+var zuEuropaZ = (Europa18 - Europa08);
+var relNordAmerika = (NordAmerika18 / Gesamt * 100);
+var zuNordAmerikaP = (100 - (NordAmerika08 / NordAmerika18 * 100));
+var zuNordAmerikaZ = (NordAmerika18 - NordAmerika08);
+var relAsien = (Asien18 / Gesamt * 100);
+var zuAsienP = (100 - (Asien08 / Asien18 * 100));
+var zuAsienZ = (Asien18 - Asien08);
+var relAustralien = (Australien18 / Gesamt * 100);
+var zuAustralienP = (100 - (Australien08 / Australien18 * 100));
+var zuAustralienZ = (Australien18 - Australien08);
+function myFunction(name, value18, valueRel, valueChange, valueGrowth) {
+    document.querySelector("h1").innerHTML = "Carbon Dioxide Emissions in " + name;
+    document.querySelector(".h2_1").innerHTML = value18.toString() + "kg CO2";
+    document.querySelector("p").innerHTML = "Emission absolute of " + name + " in 2018";
+    document.querySelector(".h2_2").innerHTML = Math.round(value18 / Gesamt * 100) + "%";
+    document.querySelector(".h2_3").innerHTML = Math.round(valueChange) + "%";
+    document.querySelector(".h2_4").innerHTML = valueGrowth + "kg CO2";
+    document.querySelector(".chart").setAttribute('style', 'height:' + Math.round(value18 / Gesamt * 100) + "%");
+}
+document.querySelector(".Europa").addEventListener("click", myFunction.bind(null, "Europe", Europa18, relEuropa, zuEuropaP, zuEuropaZ));
+document.querySelector(".NordAmerika").addEventListener("click", myFunction.bind(null, "North America", NordAmerika18, relNordAmerika, zuNordAmerikaP, zuNordAmerikaZ));
+document.querySelector(".SüdAmerika").addEventListener("click", myFunction.bind(null, "South America", SüdAmerika18, relSüdAmerika, zuSüdAmerikaP, zuSüdAmerikaZ));
+document.querySelector(".Afrika").addEventListener("click", myFunction.bind(null, "Africa", Afrika18, relAfrika, zuAfrikaP, zuAfrikaZ));
+document.querySelector(".Asien").addEventListener("click", myFunction.bind(null, "Asia", Asien18, relAsien, zuAsienP, zuAsienZ));
+document.querySelector(".Australien").addEventListener("click", myFunction.bind(null, "Australia", Australien18, relAustralien, zuAustralienP, zuAustralienZ));
+//# sourceMappingURL=script.js.map
