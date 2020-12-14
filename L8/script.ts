@@ -1,5 +1,5 @@
 //Array Pads & Sounds
-var pad = [];
+const pad: HTMLAudioElement[] = [];
 pad [0] = new Audio("assets/A.mp3"); 
 pad [1] = new Audio("assets/C.mp3"); 
 pad [2] = new Audio("assets/F.mp3"); 
@@ -11,45 +11,45 @@ pad [7] = new Audio("assets/laugh-2.mp3");
 pad [8] = new Audio("assets/snare.mp3"); 
 
 //Eventlistener Pads
-document.querySelector(".pad1").addEventListener("click", function () {
+document.querySelector(".pad1").addEventListener("click", function (): void {
     playSample(0);
     recordingSample(0);
 });
-document.querySelector(".pad2").addEventListener("click", function () {
+document.querySelector(".pad2").addEventListener("click", function (): void {
     playSample(1);
     recordingSample(1);
 });
-document.querySelector(".pad3").addEventListener("click", function () {
+document.querySelector(".pad3").addEventListener("click", function (): void {
     playSample(2);
     recordingSample(2);
 });
-document.querySelector(".pad4").addEventListener("click", function () {
+document.querySelector(".pad4").addEventListener("click", function (): void {
     playSample(3);
     recordingSample(3);
 });
-document.querySelector(".pad5").addEventListener("click", function () {
+document.querySelector(".pad5").addEventListener("click", function (): void {
     playSample(4);
     recordingSample(4);
 });
-document.querySelector(".pad6").addEventListener("click", function () {
+document.querySelector(".pad6").addEventListener("click", function (): void {
     playSample(5);
     recordingSample(5);
 });
-document.querySelector(".pad7").addEventListener("click", function () {
+document.querySelector(".pad7").addEventListener("click", function (): void {
     playSample(6);
     recordingSample(6);
 });
-document.querySelector(".pad8").addEventListener("click", function () {
+document.querySelector(".pad8").addEventListener("click", function (): void {
     playSample(7);
     recordingSample(7);
 });
-document.querySelector(".pad9").addEventListener("click", function () {
+document.querySelector(".pad9").addEventListener("click", function (): void {
     playSample(8);
     recordingSample(8);
 });
 
 //Function Pads
-function playSample(i: number) {
+function playSample(i: number): void {
 pad[i].play();
 }
 
@@ -89,7 +89,7 @@ function Loop (b: boolean): void {
             else {
                 x = 0;
             }
-        }, 400 );
+        },                      400 );
     }
     else {
         clearInterval(intervall);
