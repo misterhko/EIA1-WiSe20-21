@@ -9,9 +9,6 @@
         }
     });
 
-// Eingabefeld leeren nach Enter
-    const removeAll: HTMLElement = (document.querySelector(".fas fa-redo"));
-    
 // Aufgaben Zähler
     let aufgaben: number = 0;
     function Gesamtaufgaben(): void {

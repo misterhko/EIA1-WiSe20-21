@@ -7,8 +7,6 @@ inputField.addEventListener("keypress", function (event) {
         inputField.value = "";
     }
 });
-// Eingabefeld leeren nach Enter
-var removeAll = (document.querySelector(".fas fa-redo"));
 // Aufgaben Zähler
 var aufgaben = 0;
 function Gesamtaufgaben() {
