@@ -9,8 +9,8 @@ inputField.addEventListener("keypress", function (event) {
 });
 // Aufgaben Zähler
 var aufgaben = 0;
-function Gesamtaufgaben() {
-    document.getElementById("Gesamtaufgaben").innerText = aufgaben + " : 0 für die Faulheit!";
+function total() {
+    document.getElementById("total").innerText = aufgaben + " : 0 für die Faulheit!";
 }
 // Aufgabe hinzufügen
 function AufgabeErstellen() {
@@ -32,12 +32,12 @@ function AufgabeErstellen() {
         deleteText(deleteBtn, wrapper);
     });
     aufgaben++;
-    Gesamtaufgaben();
+    total();
 }
 // Funktion für Deletebutton
 function deleteText(deleteBtn, wrapper) {
     wrapper.remove();
     aufgaben--;
-    Gesamtaufgaben();
+    total();
 }
 //# sourceMappingURL=script.js.map

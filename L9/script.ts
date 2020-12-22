@@ -1,8 +1,8 @@
 // Vorgabe Eingabefeld
-    const inputField: HTMLInputElement = (document.getElementById("text") as HTMLInputElement);
+const inputField: HTMLInputElement = (document.getElementById("text") as HTMLInputElement);
 
 // Enter als Eingabe definieren
-    inputField.addEventListener("keypress", function (event: KeyboardEvent): void {
+inputField.addEventListener("keypress", function (event: KeyboardEvent): void {
         if (event.key == "Enter") {
             AufgabeErstellen();
             inputField.value = "";
@@ -10,13 +10,13 @@
     });
 
 // Aufgaben Zähler
-    let aufgaben: number = 0;
-    function Gesamtaufgaben(): void {
-        document.getElementById("Gesamtaufgaben").innerText = aufgaben + " : 0 für die Faulheit!";
+let aufgaben: number = 0;
+function total(): void {
+        document.getElementById("total").innerText = aufgaben + " : 0 für die Faulheit!";
     }
 
 // Aufgabe hinzufügen
-    function AufgabeErstellen(): void {
+function AufgabeErstellen(): void {
         let myCheckbox: HTMLInputElement = document.createElement("input");
         myCheckbox.type = "checkbox";
         myCheckbox.className = "checkbox";
@@ -40,12 +40,12 @@
             deleteText(deleteBtn, wrapper);
         });     
         aufgaben++;
-        Gesamtaufgaben();
+        total();
         }
     
 // Funktion für Deletebutton
-    function deleteText(deleteBtn: HTMLElement, wrapper: HTMLDivElement): void {
+function deleteText(deleteBtn: HTMLElement, wrapper: HTMLDivElement): void {
         wrapper.remove();
         aufgaben--;
-        Gesamtaufgaben();
+        total();
     }   
